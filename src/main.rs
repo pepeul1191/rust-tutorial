@@ -23,7 +23,10 @@ fn main() {
   server.utilize(router! {
     get "**" => |_req, _res| {
       "hola mundo"
-    }
+    }m
+    get "/departamento/listar" => |_req, _res| {
+      "listar departamentos"
+    },
   });
 
   server.listen("127.0.0.1:6767");
